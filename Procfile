@@ -1,1 +1,1 @@
-web: gunicorn asl.asl.wsgi
+web: gunicorn asl.wsgi
