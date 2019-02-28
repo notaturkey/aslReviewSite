@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head>
+    <strong><h style="width: 200px;" class="text-white">ASL unit 1 review</h></strong>
+    <p class="mx-auto"><a href="/polls/">home</a></p>
+    <title>ASL unit 1 review</title>
+</head>
+<body style="background-color:black;">
+<p class="text-white">Here is a basic website to remember all the asl signs we have to study! <br/>
+click on random for a random word or "Ordered" for the Vocab words in the order of the study sheet</p>
+
+<button type="button" onclick="location.href='/polls/{{ rando_num}}/'">Random</button>
+<button type="button" onclick="location.href='/polls/{{1}}/'">Ordered</button>
+
+
+<p class="text-white">List of all vocab words in unit 1:</p>
+    {% if latest_word_list %}
+    <ul>
+    {% for word in latest_word_list %}
+        <li><a href="/polls/{{ word.id }}/">{{ word.random_word }}</a></li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    <p>No words are available.</p>
+    {% endif %}
+</body>
+</html>
+
