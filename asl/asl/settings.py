@@ -26,7 +26,7 @@ SECRET_KEY = '7%s-zi)1swo5)6oorj)3m2-*)o4o03%$q_2+=p6%r_i3fr7!8n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['node26.codenvy.io','node12.codenvy.io']
+ALLOWED_HOSTS = ['shrouded-river-53179.herokuapp.com','node26.codenvy.io','node12.codenvy.io']
 
 
 # Application definition
