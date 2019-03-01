@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['shrouded-river-53179.herokuapp.com','node26.codenvy.io','node1
 # Application definition
 
 INSTALLED_APPS = [
+    'unit2.apps.Unit2Config',
     'polls.apps.PollsConfig',
     'django_heroku',
     'django.contrib.admin',

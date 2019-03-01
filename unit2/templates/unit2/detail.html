@@ -4,29 +4,28 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
-    <strong class="mx-auto" style="width: 200px;"><h class="text-white">ASL unit 1 review</h></strong>
-    <p class="mx-auto"><a href="/polls/">home</a>   <a href="/unit2/">unit2</a></p>
-    <title>ASL unit 1 review</title>
+    <strong class="mx-auto" style="width: 200px;"><h class="text-white">ASL unit 2 review</h></strong>
+    <p class="mx-auto"><a href="/polls/">home</a> <a href="/polls/">unit1</a></p>
+    <title>ASL unit 2 review</title>
 </head>
 <body style="background-color:black;">
 <p class="text-white">The word to practice is: {{random_word }}</p>
 <p><a href= {{url}} target=”_blank”> help! </a></p>
 
-<button type="button" onclick="location.href='/polls/{{prev}}/'">Last</button>
-<button type="button" onclick="location.href='/polls/{{ rando_num}}/'">Random</button>
-<button type="button" onclick="location.href='/polls/{{nxt}}/'">Next</button>
+<button type="button" onclick="location.href='/unit2/{{prev}}/'">Last</button>
+<button type="button" onclick="location.href='/unit2/{{ rando_num}}/'">Random</button>
+<button type="button" onclick="location.href='/unit2/{{nxt}}/'">Next</button>
 <br/>
 <br/>
 <br/>
 <br/>
 <br/>
 <br/>
-
 <p class="text-white">List of all vocab words in unit 1:</p>
     {% if latest_word_list %}
     <ul>
     {% for word in latest_word_list %}
-        <li><a href="/polls/{{ word.id }}/">{{ word.random_word }}</a></li>
+        <li><a href="/unit2/{{ word.id }}/">{{ word.random_word }}</a></li>
     {% endfor %}
     </ul>
     {% else %}

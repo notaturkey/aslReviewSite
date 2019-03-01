@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-responsive.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head>
+    <strong><h style="width: 200px;" class="text-white">ASL unit 2 review</h></strong>
+    <p class="mx-auto"><a href="/polls/">home</a>   <a href="/polls/">unit1</a></p>
+    <title>ASL unit 2 review</title>
+</head>
+<body style="background-color:black;">
+<p class="text-white">Here is a basic website to remember all the asl signs we have to study! <br/>
+click on random for a random word or "Ordered" for the Vocab words in the order of the study sheet</p>
+
+<button type="button" onclick="location.href='/unit2/{{ rando_num}}/'">Random</button>
+<button type="button" onclick="location.href='/unit2/{{1}}/'">Ordered</button>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+ 
+<p class="text-white">List of all vocab words in unit 2:</p>
+  <div class="h-100 row align-items-center">
+  <div class="col" >
+
+    {% if latest_word_list %}
+    <ul>
+    {% for word in latest_word_list %}
+        <li><a href="/unit2/{{ word.id }}/">{{ word.random_word }}</a></li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    <p>No words are available.</p>
+    {% endif %}
+    </div>
+    </div>
+    
+    <script>
+il {
+    -moz-column-count: 4;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 20px;
+    column-count: 4;
+    column-gap: 20px;
+}
+</script>
+</body>
+</html>
+
+
