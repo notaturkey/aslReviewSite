@@ -5,7 +5,7 @@ with open('./aslvocab1.txt') as f:
         q = word(random_word = line, url = 'https://student.truewayasl.com/?s=%' + line)
         q.save()
         
-from unit.models import word
+from unit2.models import word2
 
 with open('./aslvocab2.txt') as f:
     for line in f:
